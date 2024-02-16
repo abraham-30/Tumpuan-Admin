@@ -61,7 +61,7 @@ class AddSuaraPuan extends StatelessWidget{
                           ]
                         ),
                         SizedBox(height: 15,),
-                        RegularButton(onPressed: (){})
+                        RegularButton(onPressed: (){}, buttonLabel: 'Add Suara Puan',)
                       ],
                     ),
                   ),
@@ -70,9 +70,9 @@ class AddSuaraPuan extends StatelessWidget{
                     children: [
                       Column(
                         children: [
-                          TextFields(),
+                          TextFields(textFieldLabel: 'Judul'),
                           SizedBox(height: 15,),
-                          TextFields(),
+                          TextFields(textFieldLabel: 'Kategori',),
                         ],
                       ),
                       SizedBox(width: 15,),

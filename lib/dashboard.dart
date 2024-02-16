@@ -225,7 +225,7 @@ class Dashboard extends StatelessWidget{
                                       color: Pallete.pink4,
                                     ),
                                   ),
-                                  RegularButton(onPressed: (){})
+                                  RegularButton(onPressed: (){}, buttonLabel: '',)
                                 ],
                               ),
                               SizedBox(height: 15,),

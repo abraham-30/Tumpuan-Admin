@@ -59,18 +59,18 @@ class AddManageRole extends StatelessWidget{
                           ]
                         ),
                         SizedBox(height: 15,),
-                        RegularButton(onPressed: (){}),
+                        RegularButton(onPressed: (){}, buttonLabel: 'Add Manage Role'),
                         SizedBox(height: 15,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Name',),
                             SizedBox(height: 15,),
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Email',),
                             SizedBox(height: 15,),
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Username',),
                             SizedBox(height: 15,),
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Password',),
                             SizedBox(height: 15,),
                             TextFieldsLead(),
                             SizedBox(height: 15,),

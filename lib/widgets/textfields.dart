@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/palette/palette.dart';
 
 class TextFields extends StatelessWidget{
-  const TextFields({Key? key}) : super(key: key);
+  const TextFields({Key? key, required this.textFieldLabel}) : super(key: key);
+  final String textFieldLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class TextFields extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Test',
+              '$textFieldLabel',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),

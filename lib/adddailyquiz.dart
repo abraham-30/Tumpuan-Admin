@@ -59,16 +59,16 @@ class AddDailyQuiz extends StatelessWidget{
                           ]
                         ),
                         SizedBox(height: 15,),
-                        RegularButton(onPressed: (){}),
+                        RegularButton(onPressed: (){}, buttonLabel: 'Add Daily Quiz'),
                         SizedBox(height: 15,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Judul',),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Question',),
                                 TextFieldsBtn(),
                                 TextFieldsBtn(),
                                 TextFieldsBtn(),

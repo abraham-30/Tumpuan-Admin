@@ -6,8 +6,8 @@ import 'package:tumpuan/widgets/regularbtn.dart';
 import 'package:tumpuan/widgets/submitbtn.dart';
 import 'package:tumpuan/widgets/textfields.dart';
 
-class AddKategoriUntuk extends StatelessWidget{
-  const AddKategoriUntuk({Key? key}) : super(key: key);
+class AddKategoriSuaraPuan extends StatelessWidget{
+  const AddKategoriSuaraPuan({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -58,14 +58,14 @@ class AddKategoriUntuk extends StatelessWidget{
                           ]
                         ),
                         SizedBox(height: 15,),
-                        RegularButton(onPressed: (){}),
+                        RegularButton(onPressed: (){}, buttonLabel: 'Add Kategori Suara Puan'),
                         SizedBox(height: 15,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            TextFields(),
+                            TextFields(textFieldLabel: 'ID Kategori',),
                             SizedBox(height: 15,),
-                            TextFields(),
+                            TextFields(textFieldLabel: 'Nama Kategori',),
                             SizedBox(height: 15,),
                             SubmitButton(onPressed: (){}),
                           ],

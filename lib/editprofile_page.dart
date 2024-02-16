@@ -43,18 +43,18 @@ class EditProfile extends StatelessWidget{
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children:[
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Nama',),
                                 SizedBox(height: 15,),
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Email',),
                                 SizedBox(height: 15,),
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Username',),
                                 SizedBox(height: 15,),
                                 Container(
                                   child: Row(
                                     children: [
-                                      RegularButton(onPressed: (){}),
+                                      RegularButton(onPressed: (){}, buttonLabel: ''),
                                       SizedBox(width: 15,),
-                                      RegularButton(onPressed: (){}),
+                                      RegularButton(onPressed: (){}, buttonLabel: ''),
                                     ],
                                   ),
                                 ),
@@ -64,18 +64,18 @@ class EditProfile extends StatelessWidget{
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Birthdate',),
                                 SizedBox(height: 15,),
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Role',),
                                 SizedBox(height: 15,),
-                                TextFields(),
+                                TextFields(textFieldLabel: 'Telephone',),
                                 SizedBox(height: 15,),
                                 Container(
                                   child: Row(
                                     children: [
-                                      RegularButton(onPressed: (){}),
+                                      RegularButton(onPressed: (){}, buttonLabel: ''),
                                       SizedBox(width: 15,),
-                                      RegularButton(onPressed: (){}),
+                                      RegularButton(onPressed: (){}, buttonLabel: ''),
                                     ],
                                   ),
                                 ),

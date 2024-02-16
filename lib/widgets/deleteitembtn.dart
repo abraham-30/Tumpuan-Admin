@@ -1,16 +1,15 @@
 import "package:flutter/material.dart";
 import "package:tumpuan/palette/palette.dart";
 
-class RegularButton extends StatelessWidget{
-  const RegularButton({Key? key, required this.onPressed, required this.buttonLabel,}) : super(key: key);
+class DeleteItemButton extends StatelessWidget{
+  const DeleteItemButton({Key? key, required this.onPressed,}) : super(key: key);
   final VoidCallback onPressed;
-  final String buttonLabel;
-  
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 175,
-      height: 50,
+      width: 150,
+      height: 30,
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
@@ -23,8 +22,8 @@ class RegularButton extends StatelessWidget{
             ),
           )
           ),
-          child: Text(
-              '$buttonLabel', 
+          child: const Text(
+              'Delete', 
               style: TextStyle(
                 fontWeight: FontWeight.normal,
                 fontSize: 12,

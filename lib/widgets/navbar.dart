@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tumpuan/dailyquiz_page.dart';
+import 'package:tumpuan/dashboard.dart';
+import 'package:tumpuan/editprofile_page.dart';
+import 'package:tumpuan/kategorisuarapuan_page.dart';
+import 'package:tumpuan/kategoriuntukpuan_page.dart';
+import 'package:tumpuan/managerole_page.dart';
 import 'package:tumpuan/palette/palette.dart';
+import 'package:tumpuan/suarapuan_page.dart';
+import 'package:tumpuan/untukpuan_page.dart';
 import 'package:tumpuan/widgets/navbar_button.dart';
 
 class NavBar extends StatelessWidget{
@@ -15,11 +23,11 @@ class NavBar extends StatelessWidget{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                   radius: 32,
                   backgroundColor: Pallete.pink4,
                   ),
-                  Text(
+                  const Text(
                     'Miko',
                     style: TextStyle(
                       fontWeight: FontWeight.bold
@@ -29,7 +37,11 @@ class NavBar extends StatelessWidget{
                     icon: const Icon(Icons.edit),
                     color: Pallete.blackColor,
                     // tooltip: '',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push( 
+                      context, 
+                      MaterialPageRoute(builder: (context) => const EditProfile())); 
+                    },
                   ),
                 ]
               )
@@ -37,49 +49,77 @@ class NavBar extends StatelessWidget{
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => Dashboard())); 
+                  }, buttonLabel: 'Dashboard', buttonIcon: const Icon(Icons.home_rounded),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const ManageRole())); 
+                  }, buttonLabel: 'Manage Role', buttonIcon: const Icon(Icons.people_outline_outlined),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const SuaraPuan())); 
+                  }, buttonLabel: 'Suara Puan', buttonIcon: const Icon(Icons.transcribe),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const KategoriSuaraPuan())); 
+                  }, buttonLabel: 'Kategori Suara Puan', buttonIcon: const Icon(Icons.transcribe),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const DailyQuiz())); 
+                  }, buttonLabel: 'Daily Quiz', buttonIcon: const Icon(Icons.calendar_month),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                      Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const UntukPuan())); 
+                  }, buttonLabel: 'Untuk Puan', buttonIcon: const Icon(Icons.newspaper),),
                 ]
               ),
             ),
             ListTile(
               subtitle: Column(
                 children:[
-                  NavbarButton(onPressed: () {},),
+                  NavbarButton(onPressed: () {
+                    Navigator.push( 
+                    context, 
+                    MaterialPageRoute(builder: (context) => const KategoriUntukPuan())); 
+                  }, buttonLabel: 'Kategori Untuk Puan', buttonIcon: const Icon(Icons.newspaper),),
                 ]
               ),
             ),

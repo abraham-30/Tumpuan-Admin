@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tumpuan/addsuarapuan_page.dart';
+import 'package:tumpuan/adduntukpuan_page.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
-class SuaraPuan extends StatelessWidget{
-    const SuaraPuan({Key? key}) : super(key: key);
+class UntukPuan extends StatelessWidget{
+    const UntukPuan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class SuaraPuan extends StatelessWidget{
                             height: 25,
                             child: Center(
                               child: Text(
-                                'Suara Puan',
+                                'Untuk Puan',
                                 style: TextStyle(
                                   fontWeight: FontWeight.normal,
                                   color: Pallete.whiteColor,
@@ -53,12 +53,12 @@ class SuaraPuan extends StatelessWidget{
                         RegularButton(onPressed: (){
                           Navigator.push( 
                           context, 
-                          MaterialPageRoute(builder: (context) => AddSuaraPuan())); 
-                        }, buttonLabel: 'Add Suara Puan',)
+                          MaterialPageRoute(builder: (context) => const AddUntukPuan())); 
+                        }, buttonLabel: 'Add Untuk Puan',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Suara Puan'),
+                  AdminTable(tableName: 'Untuk Puan'),
                 ]
               ),
             )

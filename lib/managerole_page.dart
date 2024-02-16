@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tumpuan/addsuarapuan_page.dart';
+import 'package:tumpuan/addmanagerole_page.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
-class SuaraPuan extends StatelessWidget{
-    const SuaraPuan({Key? key}) : super(key: key);
+class ManageRole extends StatelessWidget{
+    const ManageRole({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class SuaraPuan extends StatelessWidget{
                             height: 25,
                             child: Center(
                               child: Text(
-                                'Suara Puan',
+                                'Manage Role',
                                 style: TextStyle(
                                   fontWeight: FontWeight.normal,
                                   color: Pallete.whiteColor,
@@ -51,14 +51,14 @@ class SuaraPuan extends StatelessWidget{
                         ),
                         SizedBox(height: 15,),
                         RegularButton(onPressed: (){
-                          Navigator.push( 
-                          context, 
-                          MaterialPageRoute(builder: (context) => AddSuaraPuan())); 
-                        }, buttonLabel: 'Add Suara Puan',)
+                            Navigator.push( 
+                            context, 
+                            MaterialPageRoute(builder: (context) => const AddManageRole())); 
+                        }, buttonLabel: 'Add Manage Role',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Suara Puan'),
+                  AdminTable(tableName: 'Manage Role'),
                 ]
               ),
             )

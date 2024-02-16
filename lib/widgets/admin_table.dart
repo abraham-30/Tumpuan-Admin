@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:tumpuan/palette/palette.dart';
+import 'package:tumpuan/widgets/deleteitembtn.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
+import 'package:tumpuan/widgets/updateitembtn.dart';
+// import 'package:tumpuan/widgets/regularbtn.dart';
 
 class AdminTable extends StatelessWidget{
-  const AdminTable({Key? key}) : super(key: key);
+  const AdminTable({Key? key, required this.tableName}) : super(key: key);
+  final String tableName;
+
   @override
   Widget build(BuildContext context) {
     return 
@@ -32,7 +37,7 @@ class AdminTable extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                     Text(
-                      'Test',
+                      '$tableName',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontWeight: FontWeight.bold
@@ -133,7 +138,7 @@ class AdminTable extends StatelessWidget{
                               ),
                                 ],
                               ),
-                              ...List.generate(3, (index) => const TableRow(
+                              ...List.generate(3, (index) => TableRow(
                                 children: [
                                   TableCell(verticalAlignment: TableCellVerticalAlignment.middle,
                                     child: Padding(
@@ -150,7 +155,13 @@ class AdminTable extends StatelessWidget{
                                   TableCell(verticalAlignment: TableCellVerticalAlignment.middle,
                                     child: Padding(
                                       padding: EdgeInsets.all(8),
-                                      child: Text('Cells 3'),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                        children: [
+                                          UpdateItemButton(onPressed: (){}),
+                                          DeleteItemButton(onPressed: (){}),
+                                        ],
+                                      )
                                     ),
                                   ),
                                 ],

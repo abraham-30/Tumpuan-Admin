@@ -1,21 +1,20 @@
 import "package:flutter/material.dart";
 import "package:tumpuan/palette/palette.dart";
 
-class RegularButton extends StatelessWidget{
-  const RegularButton({Key? key, required this.onPressed, required this.buttonLabel,}) : super(key: key);
+class UpdateItemButton extends StatelessWidget{
+  const UpdateItemButton({Key? key, required this.onPressed,}) : super(key: key);
   final VoidCallback onPressed;
-  final String buttonLabel;
-  
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 175,
-      height: 50,
+      width: 150,
+      height: 30,
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          foregroundColor: getColor(Pallete.pink4, Pallete.whiteColor),
-          backgroundColor: getColor(Pallete.pink0, Pallete.pink4),
+          foregroundColor: getColor(Pallete.pink1, Pallete.pink1),
+          backgroundColor: getColor(Pallete.pink1, Pallete.pink1),
           fixedSize: const MaterialStatePropertyAll(Size(275, 50)),
           shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(
@@ -23,11 +22,12 @@ class RegularButton extends StatelessWidget{
             ),
           )
           ),
-          child: Text(
-              '$buttonLabel', 
+          child: const Text(
+              'Update', 
               style: TextStyle(
                 fontWeight: FontWeight.normal,
                 fontSize: 12,
+                color: Pallete.blackColor,
               ),
             ),
       ),
