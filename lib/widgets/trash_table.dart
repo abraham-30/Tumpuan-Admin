@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/deleteitembtn.dart';
+import 'package:tumpuan/widgets/groupingbtn.dart';
 // import 'package:tumpuan/widgets/regularbtn.dart';
 import 'package:tumpuan/widgets/updateitembtn.dart';
 // import 'package:tumpuan/widgets/regularbtn.dart';
 
-class AdminTable extends StatelessWidget{
-  const AdminTable({Key? key, required this.tableName, required this.deleteButtonLabel, required this.updateButtonLabel}) : super(key: key);
+class TrashTable extends StatelessWidget{
+  const TrashTable({Key? key, required this.tableName, required this.deleteButtonLabel, required this.updateButtonLabel}) : super(key: key);
   final String tableName;
   final String deleteButtonLabel;
   final String updateButtonLabel;
@@ -45,11 +46,6 @@ class AdminTable extends StatelessWidget{
                         fontWeight: FontWeight.bold
                       ),
                     ),
-                    FilledButton(onPressed: (){}, 
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Pallete.blackColor),
-                      ),
-                      child: Text('Trash')),
                   ],)
                 ),
                 Center(
@@ -175,6 +171,21 @@ class AdminTable extends StatelessWidget{
                   ),
                 ),
                 ),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GroupingButton(onPressed: (){}, buttonIcon: Icons.arrow_back_ios_new_outlined,),
+                    const SizedBox(width: 5,),
+                    GroupingButton(onPressed: (){}, buttonIcon: Icons.texture_sharp),
+                    const SizedBox(width: 5,),
+                    GroupingButton(onPressed: (){}, buttonIcon: Icons.texture_sharp),
+                    const SizedBox(width: 5,),
+                    GroupingButton(onPressed: (){}, buttonIcon: Icons.texture_sharp),
+                    const SizedBox(width: 5,),
+                    GroupingButton(onPressed: (){}, buttonIcon: Icons.arrow_forward_ios_outlined,),
+                  ],
+                )
               ],
             )
           ),

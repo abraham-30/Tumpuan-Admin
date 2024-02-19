@@ -32,7 +32,7 @@ class TextFieldsLeadState extends State<TextFieldsLead>{
                 Padding(
                   padding: EdgeInsets.all(1),
                   child: Container(
-                    padding: EdgeInsets.only(left: 16, right: 16),
+                    padding: EdgeInsets.only(left: 14, right: 14),
                     decoration: BoxDecoration(
                       border: Border.all(
                         width: 2,

@@ -11,7 +11,7 @@ class TextFieldsBtn extends StatelessWidget{
       children: [
         ConstrainedBox(
           constraints: const BoxConstraints(
-            maxWidth: 380
+            maxWidth: 350
           ),
           child: 
             Column(
@@ -25,7 +25,7 @@ class TextFieldsBtn extends StatelessWidget{
                 ),
                 TextFormField(
                   decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.all(14),
+                  contentPadding: const EdgeInsets.all(19),
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
                       color: Pallete.blackColor,
@@ -56,7 +56,7 @@ class TextFieldsBtn extends StatelessWidget{
               borderRadius: BorderRadius.circular(10),
               onTap: (){},
               child: Padding(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(14),
                 child: Icon(
                     Icons.send,
                     color: Pallete.blackColor,

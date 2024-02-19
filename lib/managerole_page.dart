@@ -58,7 +58,7 @@ class ManageRole extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Manage Role'),
+                  AdminTable(tableName: 'Manage Role', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

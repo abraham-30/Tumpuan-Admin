@@ -53,12 +53,12 @@ class UntukPuan extends StatelessWidget{
                         RegularButton(onPressed: (){
                           Navigator.push( 
                           context, 
-                          MaterialPageRoute(builder: (context) => const AddUntukPuan())); 
+                          MaterialPageRoute(builder: (context) => AddUntukPuan())); 
                         }, buttonLabel: 'Add Untuk Puan',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Untuk Puan'),
+                  AdminTable(tableName: 'Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

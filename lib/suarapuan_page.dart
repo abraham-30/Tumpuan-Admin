@@ -58,7 +58,7 @@ class SuaraPuan extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Suara Puan'),
+                  AdminTable(tableName: 'Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

@@ -58,7 +58,7 @@ class DailyQuiz extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Daily Quiz'),
+                  AdminTable(tableName: 'Daily Quiz', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

@@ -2,8 +2,9 @@ import "package:flutter/material.dart";
 import "package:tumpuan/palette/palette.dart";
 
 class UpdateItemButton extends StatelessWidget{
-  const UpdateItemButton({Key? key, required this.onPressed,}) : super(key: key);
+  const UpdateItemButton({Key? key, required this.onPressed, required this.buttonLabel,}) : super(key: key);
   final VoidCallback onPressed;
+  final String buttonLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,10 @@ class UpdateItemButton extends StatelessWidget{
             ),
           )
           ),
-          child: const Text(
-              'Update', 
+          child: Text(
+              '$buttonLabel', 
               style: TextStyle(
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.bold,
                 fontSize: 12,
                 color: Pallete.blackColor,
               ),

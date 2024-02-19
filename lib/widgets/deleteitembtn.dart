@@ -2,8 +2,9 @@ import "package:flutter/material.dart";
 import "package:tumpuan/palette/palette.dart";
 
 class DeleteItemButton extends StatelessWidget{
-  const DeleteItemButton({Key? key, required this.onPressed,}) : super(key: key);
+  const DeleteItemButton({Key? key, required this.onPressed, required this.buttonLabel,}) : super(key: key);
   final VoidCallback onPressed;
+  final String buttonLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,10 @@ class DeleteItemButton extends StatelessWidget{
             ),
           )
           ),
-          child: const Text(
-              'Delete', 
+          child: Text(
+              '$buttonLabel', 
               style: TextStyle(
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.bold,
                 fontSize: 12,
               ),
             ),

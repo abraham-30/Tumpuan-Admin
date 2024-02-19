@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tumpuan/addkategoriuntuk_page.dart';
+import 'package:tumpuan/addsuarapuan_page.dart';
 import 'package:tumpuan/palette/palette.dart';
-import 'package:tumpuan/widgets/admin_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
+import 'package:tumpuan/widgets/trash_table.dart';
 
-class KategoriUntukPuan extends StatelessWidget{
-    const KategoriUntukPuan({Key? key}) : super(key: key);
+class SuaraPuan extends StatelessWidget{
+    const SuaraPuan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class KategoriUntukPuan extends StatelessWidget{
                             height: 25,
                             child: Center(
                               child: Text(
-                                'Kategori Untuk Puan',
+                                'Trash Manage Role',
                                 style: TextStyle(
                                   fontWeight: FontWeight.normal,
                                   color: Pallete.whiteColor,
@@ -49,16 +49,16 @@ class KategoriUntukPuan extends StatelessWidget{
                             ),
                           ),
                         ),
-                        SizedBox(height: 15,),
-                        RegularButton(onPressed: (){
-                          Navigator.push( 
-                          context, 
-                          MaterialPageRoute(builder: (context) => const AddKategoriUntuk())); 
-                        }, buttonLabel: 'Add Kategori Untuk Puan',)
+                        // SizedBox(height: 15,),
+                        // RegularButton(onPressed: (){
+                        //   Navigator.push( 
+                        //   context, 
+                        //   MaterialPageRoute(builder: (context) => AddSuaraPuan())); 
+                        // }, buttonLabel: 'Trash Manage Role',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Kategori Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  TrashTable(tableName: 'Trash Manage Role', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

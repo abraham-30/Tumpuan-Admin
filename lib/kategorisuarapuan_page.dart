@@ -58,7 +58,7 @@ class KategoriSuaraPuan extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Kategori Suara Puan'),
+                  AdminTable(tableName: 'Kategori Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

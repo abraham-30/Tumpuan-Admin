@@ -23,7 +23,7 @@ class TextFields extends StatelessWidget{
             ),
             TextFormField(
               decoration: InputDecoration(
-              contentPadding: const EdgeInsets.all(14),
+              contentPadding: const EdgeInsets.all(19),
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Pallete.blackColor,
