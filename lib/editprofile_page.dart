@@ -6,7 +6,13 @@ import 'package:tumpuan/widgets/regularbtn.dart';
 import 'package:tumpuan/widgets/regularbackbtn.dart';
 
 class EditProfile extends StatelessWidget{
-    const EditProfile({Key? key}) : super(key: key);
+  EditProfile({Key? key}) : super(key: key);
+  final TextEditingController namaController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController birthdateController =  TextEditingController();
+  final TextEditingController roleController = TextEditingController();
+  final TextEditingController telephoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +49,26 @@ class EditProfile extends StatelessWidget{
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children:[
-                                TextFields(textFieldLabel: 'Nama',),
+                                TextFields(textFieldLabel: 'Nama', controller: namaController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
-                                TextFields(textFieldLabel: 'Email',),
+                                TextFields(textFieldLabel: 'Email', controller: emailController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
-                                TextFields(textFieldLabel: 'Username',),
+                                TextFields(textFieldLabel: 'Username', controller: usernameController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
                                 Container(
                                   child: Row(
@@ -64,11 +85,26 @@ class EditProfile extends StatelessWidget{
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                TextFields(textFieldLabel: 'Birthdate',),
+                                TextFields(textFieldLabel: 'Birthdate', controller: birthdateController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
-                                TextFields(textFieldLabel: 'Role',),
+                                TextFields(textFieldLabel: 'Role', controller: roleController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
-                                TextFields(textFieldLabel: 'Telephone',),
+                                TextFields(textFieldLabel: 'Telephone', controller: telephoneController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                 SizedBox(height: 15,),
                                 Container(
                                   child: Row(

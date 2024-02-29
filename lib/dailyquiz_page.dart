@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/adddailyquiz.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
+import 'package:tumpuan/widgets/dailyquiz_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
@@ -53,12 +54,12 @@ class DailyQuiz extends StatelessWidget{
                         RegularButton(onPressed: (){
                           Navigator.push( 
                           context, 
-                          MaterialPageRoute(builder: (context) => const AddDailyQuiz())); 
+                          MaterialPageRoute(builder: (context) => AddDailyQuiz())); 
                         }, buttonLabel: 'Add Daily Quiz',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Daily Quiz', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  DailyQuizTable(tableName: 'Daily Quiz', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

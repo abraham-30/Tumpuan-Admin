@@ -5,8 +5,8 @@ import 'package:tumpuan/widgets/deleteitembtn.dart';
 import 'package:tumpuan/widgets/updateitembtn.dart';
 // import 'package:tumpuan/widgets/regularbtn.dart';
 
-class AdminTable extends StatelessWidget{
-  const AdminTable({Key? key, required this.tableName, required this.deleteButtonLabel, required this.updateButtonLabel}) : super(key: key);
+class SuaraPuanTable extends StatelessWidget{
+  const SuaraPuanTable({Key? key, required this.tableName, required this.deleteButtonLabel, required this.updateButtonLabel}) : super(key: key);
   final String tableName;
   final String deleteButtonLabel;
   final String updateButtonLabel;

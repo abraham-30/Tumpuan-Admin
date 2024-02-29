@@ -13,13 +13,16 @@ import 'package:flutter_quill/flutter_quill.dart';
 class AddUntukPuan extends StatelessWidget{
   AddUntukPuan({Key? key}) : super(key: key);
   final QuillController _controller = QuillController.basic();
+  final TextEditingController namaLayananController = TextEditingController();
+  final TextEditingController nomorTeleponController = TextEditingController();
+  final TextEditingController websiteController= TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
+        // child: SingleChildScrollView(
+          // scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               Expanded(
@@ -65,7 +68,7 @@ class AddUntukPuan extends StatelessWidget{
                             ]
                           ),
                           SizedBox(height: 15,),
-                          RegularButton(onPressed: (){}, buttonLabel: 'Add Untuk Suara Puan'),
+                          RegularButton(onPressed: (){}, buttonLabel: 'Add Untuk Puan'),
                           SizedBox(height: 15,),
                           SingleChildScrollView(
                             child: Column(
@@ -76,10 +79,20 @@ class AddUntukPuan extends StatelessWidget{
                                 children: [
                                   Column(
                                     children: [
-                                      TextFields(textFieldLabel: 'Nama Layanan',),
+                                      TextFields(textFieldLabel: 'Nama Layanan', controller: namaLayananController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                       TextFieldsLead(),
                                       TextFieldsLead(),
-                                      TextFields(textFieldLabel: 'No Telephone'),
+                                      TextFields(textFieldLabel: 'No Telephone', controller: nomorTeleponController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                     ],
                                   ),
                                   SizedBox(width: 15,),
@@ -88,7 +101,12 @@ class AddUntukPuan extends StatelessWidget{
                                       TextFieldsLead(),
                                       TextFieldsLead(),
                                       TextFieldsLead(),
-                                      TextFields(textFieldLabel: 'No Telephone'),
+                                      TextFields(textFieldLabel: 'Website', controller: websiteController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                                     ],
                                   ),
                                   SizedBox(width: 15,),
@@ -103,22 +121,39 @@ class AddUntukPuan extends StatelessWidget{
                               ),
                               Row(
                                 children: [
-                                  TextFieldsBtn(),
+                                  TextFieldsBtn(buttonLabel: 'Time Open', buttonIcon: Icons.access_time_outlined),
                                   SizedBox(width: 15,),
-                                  TextFieldsBtn(),
+                                  TextFieldsBtn(buttonLabel: 'TIme Closed', buttonIcon: Icons.access_time_outlined,),
                                   SizedBox(width: 15,),
-                                  TextFieldsBtn(),
+                                  TextFieldsBtn(buttonLabel: 'Foto', buttonIcon: Icons.edit),
                                 ],
                               ),
-                              QuillEditor.basic(
-                                configurations: QuillEditorConfigurations(
-                                  controller: _controller,
-                                  readOnly: false,
-                                  sharedConfigurations: const QuillSharedConfigurations(
-                                    locale: Locale('de'),
+                              SizedBox(height: 15,),
+                              QuillToolbar.simple(
+                              configurations: QuillSimpleToolbarConfigurations(
+                                controller: _controller,
+                                sharedConfigurations: const QuillSharedConfigurations(
+                                  locale: Locale('de'),
+                                ),
+                              ),
+                              ),
+                              // Expanded(
+                                // child: 
+                              Container(
+                                height: 200,
+                                child: QuillEditor.basic(
+                                  configurations: QuillEditorConfigurations(
+                                    controller: _controller,
+                                    readOnly: false,
+                                    sharedConfigurations: const QuillSharedConfigurations(
+                                      locale: Locale('de'),
+                                    ),
                                   ),
                                 ),
                               ),
+                              // ),
+                              SizedBox(height: 15,),
+                              SubmitButton(onPressed: (){}),
                             ],
                           ),
                           )
@@ -131,7 +166,7 @@ class AddUntukPuan extends StatelessWidget{
             ]
           )
         )
-      )
+      // )
     );
   }
 }

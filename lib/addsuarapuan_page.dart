@@ -11,6 +11,9 @@ import 'package:flutter_quill/flutter_quill.dart';
 class AddSuaraPuan extends StatelessWidget{
   AddSuaraPuan({Key? key}) : super(key: key);
   final QuillController _controller = QuillController.basic();
+  final TextEditingController judulController = TextEditingController();
+  final TextEditingController kategoriController = TextEditingController();
+
   
   @override
   Widget build(BuildContext context) {
@@ -70,31 +73,48 @@ class AddSuaraPuan extends StatelessWidget{
                     children: [
                       Column(
                         children: [
-                          TextFields(textFieldLabel: 'Judul'),
+                          TextFields(textFieldLabel: 'Judul', controller: judulController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                           SizedBox(height: 15,),
-                          TextFields(textFieldLabel: 'Kategori',),
+                          TextFields(textFieldLabel: 'Kategori', controller: kategoriController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                         ],
                       ),
                       SizedBox(width: 15,),
-                      TextFieldsBtn(),
+                      TextFieldsBtn(buttonLabel: 'Assets', buttonIcon: Icons.edit,),
                     ],
                   ),
                   SizedBox(height: 15,),
-                  QuillToolbar.simple(
-                    configurations: QuillSimpleToolbarConfigurations(
-                      controller: _controller,
-                      sharedConfigurations: const QuillSharedConfigurations(
-                        locale: Locale('de'),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: QuillEditor.basic(
-                      configurations: QuillEditorConfigurations(
+                  Center(
+                    child: QuillToolbar.simple(
+                      configurations: QuillSimpleToolbarConfigurations(
                         controller: _controller,
-                        readOnly: false,
                         sharedConfigurations: const QuillSharedConfigurations(
                           locale: Locale('de'),
+                        ),
+                      ),
+                    ),
+
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(25),
+                    child: Container(
+                      height: 300,
+                      child: QuillEditor.basic(
+                        configurations: QuillEditorConfigurations(
+                          controller: _controller,
+                          readOnly: false,
+                          sharedConfigurations: const QuillSharedConfigurations(
+                            locale: Locale('de'),
+                          ),
                         ),
                       ),
                     ),

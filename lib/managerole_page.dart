@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tumpuan/addmanagerole_page.dart';
 import 'package:tumpuan/palette/palette.dart';
-import 'package:tumpuan/widgets/admin_table.dart';
+import 'package:tumpuan/widgets/managerole_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
@@ -53,12 +53,12 @@ class ManageRole extends StatelessWidget{
                         RegularButton(onPressed: (){
                             Navigator.push( 
                             context, 
-                            MaterialPageRoute(builder: (context) => const AddManageRole())); 
+                            MaterialPageRoute(builder: (context) => AddManageRole())); 
                         }, buttonLabel: 'Add Manage Role',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Manage Role', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  ManageRoleTable(tableName: 'Manage Role', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

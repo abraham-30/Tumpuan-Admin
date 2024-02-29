@@ -4,6 +4,7 @@ import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
+import 'package:tumpuan/widgets/untukpuan_table.dart';
 
 class UntukPuan extends StatelessWidget{
     const UntukPuan({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class UntukPuan extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  UntukPuanTable(tableName: 'Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

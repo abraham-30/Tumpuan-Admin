@@ -7,7 +7,9 @@ import 'package:tumpuan/widgets/submitbtn.dart';
 import 'package:tumpuan/widgets/textfields.dart';
 
 class AddKategoriSuaraPuan extends StatelessWidget{
-  const AddKategoriSuaraPuan({Key? key}) : super(key: key);
+  AddKategoriSuaraPuan({Key? key}) : super(key: key);
+  final TextEditingController idcategoriController = TextEditingController();
+  final TextEditingController namecategoriController = TextEditingController();
   
   @override
   Widget build(BuildContext context) {
@@ -63,9 +65,19 @@ class AddKategoriSuaraPuan extends StatelessWidget{
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            TextFields(textFieldLabel: 'ID Kategori',),
+                            TextFields(textFieldLabel: 'ID Kategori', controller: idcategoriController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
-                            TextFields(textFieldLabel: 'Nama Kategori',),
+                            TextFields(textFieldLabel: 'Nama Kategori', controller: namecategoriController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
                             SubmitButton(onPressed: (){}),
                           ],

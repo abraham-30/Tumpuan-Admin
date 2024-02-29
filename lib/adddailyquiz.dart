@@ -9,7 +9,9 @@ import 'package:tumpuan/widgets/textfields.dart';
 import 'package:tumpuan/widgets/textfieldsbtn.dart';
 
 class AddDailyQuiz extends StatelessWidget{
-  const AddDailyQuiz({Key? key}) : super(key: key);
+  AddDailyQuiz({Key? key}) : super(key: key);
+  final TextEditingController questionController = TextEditingController();
+  final TextEditingController judulController = TextEditingController();
   
   @override
   Widget build(BuildContext context) {
@@ -64,15 +66,25 @@ class AddDailyQuiz extends StatelessWidget{
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            TextFields(textFieldLabel: 'Judul',),
+                            TextFields(textFieldLabel: 'Judul', controller: judulController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                TextFields(textFieldLabel: 'Question',),
-                                TextFieldsBtn(),
-                                TextFieldsBtn(),
-                                TextFieldsBtn(),
-                                TextFieldsBtn(),
+                                TextFields(textFieldLabel: 'Question', controller: questionController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
+                                TextFieldsBtn(buttonLabel: 'Answer', buttonIcon: Icons.play_arrow_outlined,),
+                                TextFieldsBtn(buttonLabel: 'Answer', buttonIcon: Icons.play_arrow_outlined,),
+                                TextFieldsBtn(buttonLabel: 'Answer', buttonIcon: Icons.play_arrow_outlined,),
+                                TextFieldsBtn(buttonLabel: 'Answer', buttonIcon: Icons.play_arrow_outlined,),
                               ],
                             ),
                             AddQuestionButton(),

@@ -8,7 +8,12 @@ import 'package:tumpuan/widgets/textfields.dart';
 import 'package:tumpuan/widgets/textfieldslead.dart';
 
 class AddManageRole extends StatelessWidget{
-  const AddManageRole({Key? key}) : super(key: key);
+  AddManageRole({Key? key}) : super(key: key);
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   
   @override
   Widget build(BuildContext context) {
@@ -64,13 +69,33 @@ class AddManageRole extends StatelessWidget{
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TextFields(textFieldLabel: 'Name',),
+                            TextFields(textFieldLabel: 'Name', controller: nameController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
-                            TextFields(textFieldLabel: 'Email',),
+                            TextFields(textFieldLabel: 'Email', controller: emailController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
-                            TextFields(textFieldLabel: 'Username',),
+                            TextFields(textFieldLabel: 'Username', controller: usernameController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
-                            TextFields(textFieldLabel: 'Password',),
+                            TextFields(textFieldLabel: 'Password', controller: passwordController, validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'test';
+                                  }
+                                  return null;
+                                },),
                             SizedBox(height: 15,),
                             TextFieldsLead(),
                             SizedBox(height: 15,),

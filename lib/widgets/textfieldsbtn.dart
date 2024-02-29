@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/palette/palette.dart';
 
 class TextFieldsBtn extends StatelessWidget{
-  const TextFieldsBtn({Key? key}) : super(key: key);
+  const TextFieldsBtn({Key? key, required this.buttonLabel, required this.buttonIcon}) : super(key: key);
+  final String buttonLabel;
+  final IconData buttonIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class TextFieldsBtn extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Test',
+                  '$buttonLabel',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -58,7 +60,7 @@ class TextFieldsBtn extends StatelessWidget{
               child: Padding(
                 padding: EdgeInsets.all(14),
                 child: Icon(
-                    Icons.send,
+                    buttonIcon,
                     color: Pallete.blackColor,
                   ),
                 )

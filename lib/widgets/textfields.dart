@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/palette/palette.dart';
 
 class TextFields extends StatelessWidget{
-  const TextFields({Key? key, required this.textFieldLabel}) : super(key: key);
+  TextFields({Key? key, required this.textFieldLabel, required this.controller, required this.validator}) : super(key: key);
   final String textFieldLabel;
+  final TextEditingController controller;
+  String? Function(String?) validator;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,8 @@ class TextFields extends StatelessWidget{
               ),
             ),
             TextFormField(
+              validator: validator,
+              controller: controller,
               decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(19),
               enabledBorder: OutlineInputBorder(

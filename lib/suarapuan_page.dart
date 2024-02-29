@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tumpuan/addsuarapuan_page.dart';
 import 'package:tumpuan/palette/palette.dart';
-import 'package:tumpuan/widgets/admin_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
+import 'package:tumpuan/widgets/suarapuan_table.dart';
 
 class SuaraPuan extends StatelessWidget{
     const SuaraPuan({Key? key}) : super(key: key);
@@ -58,7 +58,7 @@ class SuaraPuan extends StatelessWidget{
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  SuaraPuanTable(tableName: 'Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

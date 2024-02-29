@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/addkategoriuntuk_page.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
+import 'package:tumpuan/widgets/kategoriuntukpuan_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
@@ -53,12 +54,12 @@ class KategoriUntukPuan extends StatelessWidget{
                         RegularButton(onPressed: (){
                           Navigator.push( 
                           context, 
-                          MaterialPageRoute(builder: (context) => const AddKategoriUntuk())); 
+                          MaterialPageRoute(builder: (context) => AddKategoriUntuk())); 
                         }, buttonLabel: 'Add Kategori Untuk Puan',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Kategori Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  KategoriUntukPuanTable(tableName: 'Kategori Untuk Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

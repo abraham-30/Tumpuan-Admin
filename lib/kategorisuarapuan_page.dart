@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tumpuan/addkategorisuara_page.dart';
 import 'package:tumpuan/palette/palette.dart';
 import 'package:tumpuan/widgets/admin_table.dart';
+import 'package:tumpuan/widgets/kategorisuarapuan_table.dart';
 import 'package:tumpuan/widgets/navbar.dart';
 import 'package:tumpuan/widgets/regularbtn.dart';
 
@@ -53,12 +54,12 @@ class KategoriSuaraPuan extends StatelessWidget{
                         RegularButton(onPressed: (){
                           Navigator.push( 
                           context, 
-                          MaterialPageRoute(builder: (context) => const AddKategoriSuaraPuan())); 
+                          MaterialPageRoute(builder: (context) => AddKategoriSuaraPuan())); 
                         }, buttonLabel: 'Add Kategori Suara Puan',)
                       ],
                     ),
                   ),
-                  AdminTable(tableName: 'Kategori Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
+                  KategoriSuaraPuanTable(tableName: 'Kategori Suara Puan', updateButtonLabel: 'Update', deleteButtonLabel: 'Delete',),
                 ]
               ),
             )

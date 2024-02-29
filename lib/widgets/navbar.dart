@@ -40,7 +40,7 @@ class NavBar extends StatelessWidget{
                     onPressed: () {
                       Navigator.push( 
                       context, 
-                      MaterialPageRoute(builder: (context) => const EditProfile())); 
+                      MaterialPageRoute(builder: (context) => EditProfile())); 
                     },
                   ),
                 ]

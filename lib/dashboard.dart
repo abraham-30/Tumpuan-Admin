@@ -174,34 +174,7 @@ class Dashboard extends StatelessWidget{
                         ),
                         Row(
                           children: [
-                            // LineChart(
-                            //    LineChartData(
-                            //     borderData: FlBorderData(show: false),
-                            //     lineBarsData: [
-                                  // The red line
-                                  // LineChartBarData(
-                                  //   spots: dummyData1,
-                                  //   isCurved: false,
-                                  //   barWidth: 3,
-                                  //   color: Colors.indigo,
-                                  // ),
-                                  // // The orange line
-                                  // LineChartBarData(
-                                  //   spots: dummyData2,
-                                  //   isCurved: false,
-                                  //   barWidth: 3,
-                                  //   color: Colors.red,
-                                  // ),
-                                  // // The blue line
-                                  // LineChartBarData(
-                                  //   spots: dummyData3,
-                                  //   isCurved: false,
-                                  //   barWidth: 3,
-                                  //   color: Colors.blue,
-                                  // )
-                                // ]
-                              // )
-                            // )
+                            
                           ],
                         ),
                       ],
